@@ -17,6 +17,7 @@ class Movie:
         if isinstance(other,Movie):
             return (self.year, self.score) < (other.year, other.score)
 
+
 m1 = Movie('Pulp Fiction', 1994, 8.9)
 m2 = Movie('The Godfather', 1972, 9.2)
 m3 = Movie("Schindler's List", 1994, 9.0)
@@ -29,22 +30,22 @@ m9 = Movie('Casablanca', 1942, 8.5)
 m10 = Movie('The Pianist', 2002, 8.4)
 
 movies = [m1, m2, m3, m4, m5, m6, m7, m8, m9, m10]
-print(movies)
+print(f'Movies: {movies}')
 movies.sort() # Sorting in ascending order by year and then by score
 print(movies)
 
 
-m_by_title = sorted(movies, key=lambda x: x.title) # Sorting alphabetically by title
+m_by_title = sorted(movies, key=lambda x: x.title)  # Sorting alphabetically by title
 print(m_by_title)
 
-m_by_score = sorted(movies, key=lambda x: x.score) # Sorting by score in ascending order
+m_by_score = sorted(movies, key=lambda x: x.score)  # Sorting by score in ascending order
 print(m_by_score)
 
-m_by_score_desc = sorted(movies, key=lambda x: x.score, reverse=True) # Sorting by score in descending order
+m_by_score_desc = sorted(movies, key=lambda x: x.score, reverse=True)  # Sorting by score in descending order
 print(m_by_score_desc)
 
-m_by_title_year = sorted(movies, key=lambda x: (x.year, x.title), reverse=True) # Sorting by title, then year in descending order
+m_by_title_year = sorted(movies, key=lambda x: (x.year, x.title), reverse=True)  # Sorting by title, then year in descending order
 print(m_by_title_year)
 
-m_by_year = sorted(movies, key=lambda x: x.year, reverse=True) # Sorting by year in descending order
+m_by_year = sorted(movies, key=lambda x: x.year, reverse=True)  # Sorting by year in descending order
 print(m_by_year)
